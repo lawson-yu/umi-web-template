@@ -1,0 +1,54 @@
+{
+  "name": "umi-web-template",
+  "version": "1.0.0",
+  "keywords": [
+    "umi",
+    "umijs",
+    "template",
+    "react"
+  ],
+  "author": "lawson <lawson_lee@163.com>",
+  "scripts": {
+    "build": "umi build",
+    "dev": "umi dev",
+    "postinstall": "umi setup",
+    "lint": "umi lint --fix",
+    "lint:prettier": "prettier --write '**/*.{js,jsx,tsx,ts,scss,md,json}'",
+    "prepare": "husky install",
+    "preview": "umi preview --port 9091",
+    "setup": "umi setup",
+    "start": "npm run dev"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged & npm run lint",
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
+    }
+  },
+  "dependencies": {
+    "@ant-design/icons": "4.8.0",
+    "@tanstack/react-query": "4.20.4",
+    "@umijs/plugins": "4.0.36",
+    "antd": "4.24.5",
+    "axios": "1.2.1",
+    "js-cookie": "3.0.1",
+    "normalize.css": "8.0.1",
+    "umi": "4.0.36"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "17.3.0",
+    "@commitlint/config-conventional": "17.3.0",
+    "@types/js-cookie": "3.0.2",
+    "@types/react": "18.0.0",
+    "@types/react-dom": "18.0.0",
+    "@umijs/lint": "4.0.36",
+    "husky": "8.0.2",
+    "lint-staged": "13.1.0",
+    "prettier": "2.8.1",
+    "typescript": "4.8.4"
+  },
+  "engines": {
+    "node": ">=14.15.0",
+    "npm": ">=6.14.8"
+  }
+}
